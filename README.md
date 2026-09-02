@@ -20,6 +20,21 @@ cp -r mongodb-security-alerts /path/to/project/.claude/skills/
 
 See each skill's `SKILL.md` for what it does and when Claude will invoke it.
 
+## Sample usage
+
+Once `mongodb-security-alerts` is installed, just ask Claude for what you want in plain language
+— no slash command needed, the skill's description is enough for Claude to pick it up:
+
+- *"Check last 7 days CVEs for MongoDB and create a draft Slack message."*
+- *"Is Percona Server for MongoDB affected by CVE-2026-4359? Give me an OpenVEX statement."*
+- *"Triage the latest MongoDB security advisory for Percona Backup and Percona Search, and write
+  a customer-facing docs page."*
+- *"Pull the newest item from the MongoDB alerts feed and give me both a Slack draft and a
+  CVE/CPE JSON skeleton."*
+
+Claude will parse the feed, tell you which Percona products it thinks are affected (and why)
+before generating anything, and ask which output format(s) you want if you didn't already say.
+
 ## Verifying a skill is installed correctly
 
 Skills are indexed when a Claude Code session starts, so a check only works in a **new** session
